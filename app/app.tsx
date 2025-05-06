@@ -41,9 +41,7 @@ export function App() {
   const hasSelection = selection.length > 0;
   const indeterminate = hasSelection && selection.length < items.length;
   const defaultPageSize = 6;
-  const ref1 = useRef<HTMLInputElement>(null);
-  const ref2 = useRef<HTMLInputElement>(null);
-  const ref3 = useRef<HTMLInputElement>(null);
+  const ref = useRef<HTMLInputElement>(null);
   interface FormValues {
     id: number
     name: string
@@ -196,7 +194,7 @@ export function App() {
                   <Table.ColumnHeader>Name</Table.ColumnHeader>
                   <Table.ColumnHeader>Grade</Table.ColumnHeader>
                   <Table.ColumnHeader>Email</Table.ColumnHeader>
-                  <Dialog.Root initialFocusEl={() => ref1.current}>
+                  <Dialog.Root initialFocusEl={() => ref.current}>
 
                   <Dialog.Trigger asChild>
                     <Button variant="outline" size='sm' style={{padding:"8px", marginRight:'5px', marginTop:'10px', height:"5px","minWidth":"4px"}}>+</Button>
@@ -213,7 +211,7 @@ export function App() {
                           <Stack gap="4">
                             <Field.Root>
                               <Field.Label>Id</Field.Label>
-                              <Input placeholder="Id" {...register("id", { required: "Id is required" })}/>
+                              <Input ref={ref} placeholder="Id" {...register("id", { required: "Id is required" })}/>
                             </Field.Root>
                             <Field.Root>
                               <Field.Label>Name</Field.Label>
@@ -282,9 +280,7 @@ export function App() {
                   <Button variant="outline" size="sm" onClick={() => deleteAction(selection)}>
                       Delete <Kbd>⌫</Kbd>
                   </Button>
-                  <Button variant="outline" size="sm">
-                      Edit <Kbd>T</Kbd>
-                  </Button>
+
                   </ActionBar.Content>
               </ActionBar.Positioner>
               </Portal>
