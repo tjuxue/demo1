@@ -286,7 +286,7 @@ export function App() {
               </Portal>
           </ActionBar.Root>
         </GridItem >
-        <GridItem colSpan={2} style={{paddingLeft: '6px'}}>
+        <GridItem colSpan={2} style={{paddingLeft: '6px', border:'2px solid lightblue', borderRadius:'5px', boxShadow:'2px 2px 5px rgba(0, 0, 0, 0.2)'}}>
           <p style={{textAlign:'center', marginTop: '8px', marginBottom: '10px', fontSize: 20, fontWeight: 'bold'}}>Lesson Schedule</p>
           <Stack>
             <Checkbox.Root>
@@ -311,7 +311,7 @@ export function App() {
             </Checkbox.Root>
           </Stack>
         </GridItem>
-        <GridItem colSpan={2}>
+        <GridItem colSpan={2} style={{border:'2px solid lightgreen', borderRadius:'5px', boxShadow:'2px 2px 5px rgba(0, 0, 0, 0.2)'}}>
           <p style={{textAlign: "center", fontSize: 20, fontWeight: 'bold'}}>Message Boards</p>
           <div style={{padding: "5px"}}>
             <Messages/>
