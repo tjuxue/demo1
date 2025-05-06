@@ -19,6 +19,8 @@ export function Navigator() {
     return (
         <Stack>
             <Button>Class Information</Button>
+            <Button>Vocabulary</Button>
+            <Button>Idiom</Button>
             <Button>Useful Links</Button>
         </Stack>
     )
